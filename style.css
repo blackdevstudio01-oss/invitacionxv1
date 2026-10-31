@@ -102,7 +102,7 @@
 .place {
   width: 100%;
 
-  margin: 1rem auto;
+  padding: 1.5rem 1rem;
 
   display: flex;
   flex-direction: column;
@@ -113,9 +113,9 @@
 .place-img-contain {
   margin-top: 3.5rem;
 
-  width: 60vh;
-  max-width: 60vh;
-  height: 80vh;
+  width: 80%;
+  max-width: 80%;
+  height: auto;
 
   border-radius: 100%;
 
