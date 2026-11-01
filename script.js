@@ -32,13 +32,13 @@ const boton = document.getElementById("btnMusica");
 boton.addEventListener("click", async () => {
   if (musica.paused) {
     try {
-      await musica.onplay();
-      boton.textContent = "❚❚";
+      await musica.play();
+      boton.textContent = "❚❚ Pausar";
     } catch (error) {
-      console.error("No se puede reproducir", error);
+      console.error("No se pudo reproducir:", error);
     }
   } else {
     musica.pause();
-    boton.textContent = "▶";
+    boton.textContent = "▶ Música";
   }
 });
