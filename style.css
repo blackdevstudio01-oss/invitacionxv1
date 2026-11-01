@@ -268,3 +268,19 @@
   width: 100%;
   height: auto;
 }
+
+#btnMusica {
+  position: fixed;
+  bottom: 1.5rem;
+  left: 1.5rem;
+
+  padding: 0.8rem 1.2rem;
+  border: none;
+  border-radius: 2rem;
+
+  background-color: #ae3257;
+  color: white;
+
+  cursor: pointer;
+  z-index: 1000;
+}

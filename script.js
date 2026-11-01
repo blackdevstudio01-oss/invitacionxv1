@@ -26,9 +26,19 @@ const interval = setInterval(() => {
   }
 }, 1000);
 
-const musica = document.getElementById("musica-invitacion");
+const musica = document.getElementById("musica");
+const boton = document.getElementById("btnMusica");
 
-// 1. Iniciar la música inmediatamente
-if (musica) {
-  musica.play().catch((error) => console.log("Audio block:", error));
-}
+boton.addEventListener("click", async () => {
+  if (musica.paused) {
+    try {
+      await musica.onplay();
+      boton.textContent = "❚❚";
+    } catch (error) {
+      console.error("No se puede reproducir", error);
+    }
+  } else {
+    musica.pause();
+    boton.textContent = "▶";
+  }
+});
